@@ -4,7 +4,7 @@ hostname = 'localhost'
 pesan = ''
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((hostname, 50001))
-print "Menghitung luas bola"
+print "Menghitung luas prisma"
 while pesan != 'keluar':
     pesan = raw_input('Pesan : ')
     s.send(pesan)
