@@ -1,6 +1,6 @@
 import socket
-def prisma(lp=0, ls=0):
-    L = (2 * ls) + (2 * lp) 
+def prisma(ls=0, la=0):
+    L = (2 * la) + ( ls) 
     return L
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(("", 50001))
@@ -21,6 +21,6 @@ while 1:
                 x = value
                 komm.send("Parameter dicatat")
         elif data=='hitung':
-            komm.send('luas prisma dengan ls{}dan lp{} adalah {}'.format(x, prisma(ls, lp)))
+            komm.send('luas prisma dengan ls{}dan lp{} adalah {}'.format(x, prisma(ls, la)))
         else:
             komm.send('Tidak ada')
